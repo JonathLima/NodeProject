@@ -1,5 +1,4 @@
-import { Knex } from 'knex'
-
+import { Knex } from 'knex';
 
 export async function up(knex: Knex) {
   return knex.schema.createTable('locations', table => {
@@ -12,8 +11,8 @@ export async function up(knex: Knex) {
     table.decimal('longitude').notNullable();
     table.string('city').notNullable();
     table.string('uf').notNullable();
-  })
- }
+  });
+}
 
 export async function down(knex: Knex) {
   return knex.schema.dropTable('locations');
